@@ -1,5 +1,7 @@
 theme: jekyll-theme-minimal
-title: Juneyoung Oh's homepage
-description: Feel free to contact or bookmark to fallow up my career
+title: Dev Diary
+description: |
+  Writing about experiences of web development.
+
 # source: _source
 # deploy: _deploy
