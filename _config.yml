@@ -4,4 +4,4 @@ description: |
   Writing about experiences of web development.
 
 # source: _source
-# deploy: _deploy
+destination: _deploy
