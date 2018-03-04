@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 title: Juneyoung Oh's homepage
 description: Feel free to contact or bookmark to fallow up my career
+# source: _source
+# deploy: _deploy

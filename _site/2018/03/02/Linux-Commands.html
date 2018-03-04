@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Linux Commands | Juneyoung Oh’s homepage</title>
+<meta property="og:title" content="Linux Commands" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="많이 사용하는 명령어" />
+<meta property="og:description" content="많이 사용하는 명령어" />
+<link rel="canonical" href="http://localhost:4000/2018/03/02/Linux-Commands.html" />
+<meta property="og:url" content="http://localhost:4000/2018/03/02/Linux-Commands.html" />
+<meta property="og:site_name" content="Juneyoung Oh’s homepage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-03-02T00:00:00+09:00" />
+<script type="application/ld+json">
+{"image":null,"author":null,"description":"많이 사용하는 명령어","name":null,"headline":"Linux Commands","dateModified":"2018-03-02T00:00:00+09:00","datePublished":"2018-03-02T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/03/02/Linux-Commands.html"},"url":"http://localhost:4000/2018/03/02/Linux-Commands.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=e97e91229aa5ab21b1a3ac11d950424e59db9de6">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Juneyoung Oh's homepage</h1>
+        <p>Feel free to contact or bookmark to fallow up my career</p>
+
+        
+          <p class="view"><a href="http://github.com/juneyoung/juneyoung.github.io">View the Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h3 id="많이-사용하는-명령어">많이 사용하는 명령어</h3>
+
+<p><a href="https://github.com/juneyoung/DEV-INFOS/edit/master/CentOS">CentOS 항목으로</a></p>
+
+<h4 id="폴더-목록-조회ls">폴더 목록 조회(<code class="highlighter-rouge">ls</code>)</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 보통 -alh 옵션 많이 사용. a 는 all, ㅣ은 링크, h 는 크기 옵션
+$&gt; ls
+</code></pre></div></div>
+
+<h4 id="폴더-사이즈-조회du">폴더 사이즈 조회(<code class="highlighter-rouge">du</code>)</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt; du 
+</code></pre></div></div>
+
+<h4 id="폴더-소유자-및-권한-변경chown-chmod">폴더 소유자 및 권한 변경(<code class="highlighter-rouge">chown</code>, <code class="highlighter-rouge">chmod</code>)</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 권한변경. 보통 -R 옵션이랑 같이 쓰임. R은 recursive
+$&gt; chmod 777 [대상]
+# 소유자 변경
+$&gt; chown [사용자]:[사용자그룹] [대상]
+</code></pre></div></div>
+
+<h4 id="파일의-이동및-복사cp-mv">파일의 이동및 복사(<code class="highlighter-rouge">cp</code>, <code class="highlighter-rouge">mv</code>)</h4>
+<p><code class="highlighter-rouge">mv</code> 의 경우 파일명을 변경할 때도 사용. 가령 <code class="highlighter-rouge">mv a.text a1.text</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 일반적으로 -r 옵션으로 하위도 다 적용함
+$&gt; cp [현재 파일] [대상경로]
+$&gt; mv [현재 파일] [대상경로]
+</code></pre></div></div>
+
+<h4 id="파일의-압축-및-해제tar">파일의 압축 및 해제(<code class="highlighter-rouge">tar</code>)</h4>
+<p><code class="highlighter-rouge">tar</code> 명령을 사용함</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># c-compress, v-view,  
+$&gt; tar -cvf [압축파일명] [대상]
+$&gt; tar -xvf [대상]
+</code></pre></div></div>
+
+<h4 id="파일-내용보기cat">파일 내용보기(<code class="highlighter-rouge">cat</code>)</h4>
+<p><code class="highlighter-rouge">vi</code> 로는 드래그가 안되서 답답한 면이 있는데 <code class="highlighter-rouge">cat</code> 으로 쏘면 긁어 붙일 수 있어서 편하다. 일반적으로 <code class="highlighter-rouge">grep</code> 명령어로 필요한 정보만 잡는게 일반적</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt; cat [파일명]
+</code></pre></div></div>
+
+<h4 id="프로세스-조회하기ps-ptree--top">프로세스 조회하기(<code class="highlighter-rouge">ps</code>, <code class="highlighter-rouge">ptree</code>,  <code class="highlighter-rouge">top</code>)</h4>
+<p><code class="highlighter-rouge">ps</code> 는 현재 실행중인 프로세스를 볼 수 있다.(<code class="highlighter-rouge">PID</code>, <code class="highlighter-rouge">PPID</code>, 및 구동 커맨드를 알 수 있음). <code class="highlighter-rouge">ptree</code> 는 현재 프로세스의 부모/자식을 보여줌. <code class="highlighter-rouge">top</code> 은 실시간으로 메모리 사용량 등을 검사하는데 사용됨.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -e 는 전체, f 는 형식. 형식에 맞게 전체 프로세스 노출
+$&gt; ps -ef
+# 프로세스 부모 자식 노출
+$&gt; ptree
+# 실시간 프로세스 메모리 사용보기
+$&gt; top
+</code></pre></div></div>
+
+<h4 id="권한관리sudo-su">권한관리(<code class="highlighter-rouge">sudo</code>, <code class="highlighter-rouge">su</code>)</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#사용자 변경&gt; 해당 사용자 비번 요구
+$&gt; su [사용자명]
+#현재 사용자로 루트권한 사용 &gt; 현재 사용자 비번 요구
+$&gt; sudo su 
+</code></pre></div></div>
+
+<h4 id="history">History</h4>
+<ul>
+  <li>2017.04.29 : 초안작성</li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/juneyoung">juneyoung</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
