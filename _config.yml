@@ -1,7 +1,0 @@
-theme: jekyll-theme-minimal
-title: Dev Diary
-description: |
-  Writing about experiences of web development.
-
-# source: _source
-destination: _deploy
